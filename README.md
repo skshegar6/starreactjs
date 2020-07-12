@@ -1,5 +1,5 @@
 
-Run the app -> run the command promant in root folder npm install
+Run the app -> run the command promand in root folder npm install
 
 start app in root folder -> npm start
 
