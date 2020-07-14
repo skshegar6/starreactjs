@@ -25,7 +25,7 @@ class Login extends React.Component{
 
     async loginusercheck(){
         let logindata = await userApi.checkLoginUser(this.state.username);
-        if(logindata.results.length == 1 && logindata.results[0].name === this.state.username && logindata.results[0].birth_year === this.state.password){
+        if(logindata && logindata.results && logindata.results.length == 1 && logindata.results[0].name === this.state.username && logindata.results[0].birth_year === this.state.password){
             this.props.updateLogin();
             this.props.history.push('/dashboard');  
         }else if(logindata.results.length > 1){
